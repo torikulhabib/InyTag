@@ -29,7 +29,6 @@ inytag_files_lib = shared_library(
 
 install_headers(
     inytag_h_files,
-    subdir: meson.project_name()
 )
 
 declare_dependency(
@@ -39,7 +38,6 @@ declare_dependency(
 subdir('Vapi')
 pkg_mod.generate(
     inytag_files_lib,
-    subdirs: meson.project_name(),
     filebase: meson.project_name(),
     name: 'inytag',
     description: 'Simple Taglib for Vala',
