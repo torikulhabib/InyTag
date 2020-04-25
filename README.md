@@ -19,7 +19,11 @@ To install, use `ninja install`
     sudo ninja install
 
 Example write with valac:
+
 M4a Tag write;
+
 var file_mp4 = new InyTag.Mp4_File (//set path location);
+
 file_mp4.mp4_tag.title =
+
 file_mp4.save ();
