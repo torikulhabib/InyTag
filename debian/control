@@ -1,0 +1,13 @@
+Source: inytag
+Section: x11
+Priority: extra
+Maintainer: torikhabib <torik.habib@gmail.com>
+Build-Depends: meson (>= 0.43),
+               debhelper (>= 9),
+               libtag1-dev,
+Standards-Version: 4.14
+
+Package: inytag
+Architecture: any
+Depends: libtag1v5-vanilla, ${misc:Depends}, ${shlibs:Depends}
+Description: Taglib For Valac

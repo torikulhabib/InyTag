@@ -24,6 +24,7 @@ inytag_files_lib = shared_library(
         dependency('taglib'),
     ],
     install: true,
+    install_dir: join_paths(get_option('prefix'), get_option('libdir')),
     version: meson.project_version(),
 )
 
