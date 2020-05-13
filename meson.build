@@ -1,6 +1,8 @@
 project('inytag', 'cpp', version: '0.5.0')
-add_project_arguments(['-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())], language: 'cpp',)
-add_global_arguments(['-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())], language: 'cpp',)
+gettext_version = meson.project_version()
+gettext_name = meson.project_name()
+add_project_arguments(['-DGETTEXT_PACKAGE="@0@"'.format(gettext_name)], language: 'cpp',)
+add_global_arguments(['-DGETTEXT_PACKAGE="@0@"'.format(gettext_name)], language: 'cpp',)
 
 pkg_mod = import('pkgconfig')
 
@@ -18,14 +20,14 @@ inytag_files = [
 ]
 
 inytag_files_lib = shared_library(
-    meson.project_name(),
+    gettext_name,
     inytag_files,
     dependencies: [
         dependency('taglib'),
     ],
     install: true,
     install_dir: join_paths(get_option('prefix'), get_option('libdir')),
-    version: meson.project_version(),
+    version: gettext_version,
 )
 
 install_headers(
@@ -39,9 +41,9 @@ declare_dependency(
 subdir('Vapi')
 pkg_mod.generate(
     inytag_files_lib,
-    subdirs: meson.project_name(),
-    filebase: meson.project_name(),
+    subdirs: gettext_name,
+    filebase: gettext_name,
     name: 'inytag',
     description: 'Simple Taglib for Vala',
-    version: meson.project_version(),
+    version: gettext_version,
 )
