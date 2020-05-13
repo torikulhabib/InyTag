@@ -18,7 +18,9 @@ addons:
       - libstdc++-5-dev
 
 install:
-  - npm i -g @elementaryos/houston
+  - meson build --prefix=/usr
+  - cd build
+  - sudo ninja install
 
 script:
   - houston ci
