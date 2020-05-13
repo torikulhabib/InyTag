@@ -1,6 +1,6 @@
 project('inytag', 'cpp', version: '0.5.0')
-add_project_arguments(['-DGETTEXT_PACKAGE="' + meson.project_name() + '"'.format(meson.project_name())], language: 'cpp',)
-add_global_arguments(['-DGETTEXT_PACKAGE="' + meson.project_name() + '"'.format(meson.project_name())], language: 'cpp',)
+add_project_arguments(['-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())], language: 'cpp',)
+add_global_arguments(['-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())], language: 'cpp',)
 
 pkg_mod = import('pkgconfig')
 
