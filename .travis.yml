@@ -31,6 +31,3 @@ install:
   - meson build --prefix=/usr
   - cd build
   - sudo ninja install
-
-script:
-  - houston ci
