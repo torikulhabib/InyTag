@@ -27,7 +27,8 @@ addons:
     packages:
       - libstdc++-5-dev
 
-install:
+install: true
+script:
   - meson build --prefix=/usr
   - cd build
   - sudo ninja install
