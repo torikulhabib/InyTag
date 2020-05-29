@@ -2,10 +2,11 @@
 TagLib For Valac
 
 ## Mp3, Mp4, Flac.
-Repo.
-sudo add-apt-repository ppa:torik-habib/inytags
-sudo apt-get update
-sudo apt-get install inytag
+## Repo.
+
+    sudo add-apt-repository ppa:torik-habib/inytags
+    sudo apt-get update
+    sudo apt-get install inytag
 
 ## Building, Testing, and Installation
 ## You'll need the following dependencies:
